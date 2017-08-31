@@ -11,6 +11,6 @@ export class VersionService {
 
   getVersionDetails(url: string)  {
     return this.http.get(url)
-   .map((res: Response) => { res.json(); });
+   .map((res: Response) => { return res.json();});
   }
 }

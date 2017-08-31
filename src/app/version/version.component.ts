@@ -12,9 +12,8 @@ export class VersionComponent implements OnInit {
   private ratesmainPropURL: string = "./assets/buildRates.json"; 
   private eaddrBuildInfo;
   private ratesmainBuildInfo;
-  constructor(private _version: VersionService ) { }
+  constructor(private _version: VersionService ) { 
 
-  ngOnInit() {
     this._version.getVersionDetails(this.eaddrPropURL).subscribe( buildInfo => {
       this.eaddrBuildInfo = buildInfo;
       console.log(buildInfo);
@@ -23,6 +22,10 @@ export class VersionComponent implements OnInit {
       this.ratesmainBuildInfo = buildInfo;
       console.log(buildInfo);
     });
+  
   }
 
+  ngOnInit() {
+    
+  }
 }
