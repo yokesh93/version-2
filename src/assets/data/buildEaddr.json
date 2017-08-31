@@ -1,0 +1,6 @@
+{ 
+  	 "ArtifactId": dateUtils, 
+ 	 "Artifact-GroupId": com.mkyong.core.utils,
+	"Artifact-Version": 1.0-SNAPSHOT,
+	"Build-Date" :${esttime}
+}
