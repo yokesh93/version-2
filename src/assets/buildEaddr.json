@@ -1,0 +1,6 @@
+{ 
+  	 "id": "dateUtils", 
+ 	 "groupId": "com.mkyong.core.utils",
+	"version": "1.0-SNAPSHOT",
+	"date" :"${esttime}"
+}

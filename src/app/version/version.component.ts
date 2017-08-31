@@ -8,8 +8,8 @@ import { VersionService } from '../version/version.service';
   styleUrls: ['./version.component.scss']
 })
 export class VersionComponent implements OnInit {
-  private eaddrPropURL: string = "data/buildEaddr.json"; 
-  private ratesmainPropURL: string = "data/buildRates.json"; 
+  private eaddrPropURL: string = "./assets/buildEaddr.json"; 
+  private ratesmainPropURL: string = "./assets/buildRates.json"; 
   private eaddrBuildInfo;
   private ratesmainBuildInfo;
   constructor(private _version: VersionService ) { }
@@ -17,12 +17,12 @@ export class VersionComponent implements OnInit {
   ngOnInit() {
     this._version.getVersionDetails(this.eaddrPropURL).subscribe( buildInfo => {
       this.eaddrBuildInfo = buildInfo;
+      console.log(buildInfo);
     });
     this._version.getVersionDetails(this.ratesmainPropURL).subscribe( buildInfo => {
-      this.eaddrBuildInfo = buildInfo;
+      this.ratesmainBuildInfo = buildInfo;
+      console.log(buildInfo);
     });
-    console.log(this.eaddrBuildInfo);
-    console.log(this.ratesmainBuildInfo);
   }
 
 }
